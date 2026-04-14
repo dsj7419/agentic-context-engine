@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/Kayba_logo_rounded.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
 <title>ACE Documentation</title>
@@ -1622,6 +1622,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../../integrations/claude-sdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/mcp-client-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Client Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../integrations/opik/" class="md-nav__link">
         
   
@@ -1658,6 +1742,34 @@
     
   
     OpenClaw
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/hosted-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hosted API
   
 
     
@@ -1925,7 +2037,7 @@
 </code></pre></div>
 <h2 id="update-batches">Update Batches<a class="headerlink" href="#update-batches" title="Permanent link">&para;</a></h2>
 <p>The SkillManager emits operations as an <code>UpdateBatch</code> — one or more operations applied atomically:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace_next</span><span class="w"> </span><span class="kn">import</span> <span class="n">UpdateOperation</span><span class="p">,</span> <span class="n">UpdateBatch</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace</span><span class="w"> </span><span class="kn">import</span> <span class="n">UpdateOperation</span><span class="p">,</span> <span class="n">UpdateBatch</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">batch</span> <span class="o">=</span> <span class="n">UpdateBatch</span><span class="p">(</span><span class="n">operations</span><span class="o">=</span><span class="p">[</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">UpdateOperation</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ADD&quot;</span><span class="p">,</span> <span class="n">section</span><span class="o">=</span><span class="s2">&quot;Debugging&quot;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s2">&quot;Log inputs before errors&quot;</span><span class="p">),</span>
@@ -1934,6 +2046,12 @@
 <a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">skillbook</span><span class="o">.</span><span class="n">apply_update</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
 </code></pre></div>
+<p>In batch reflection mode, <code>ADD</code> and <code>UPDATE</code> operations may also include
+<code>reflection_index</code> to indicate which reflection in the input tuple primarily
+produced the operation.</p>
+<p>When an operation is synthesized from multiple reflections, it may instead use
+<code>reflection_indices</code> to list all contributing reflections. This lets downstream
+provenance attach multiple trace sources to one learned skill.</p>
 <h2 id="how-updates-flow">How Updates Flow<a class="headerlink" href="#how-updates-flow" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Agent cites skill_ids --&gt; Reflector tags them --&gt; SkillManager emits ADD/UPDATE/REMOVE
 </code></pre></div>

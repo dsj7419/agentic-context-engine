@@ -16,14 +16,14 @@
         <link rel="prev" href="../opik/">
       
       
-        <link rel="next" href="../../api/">
+        <link rel="next" href="../hosted-api/">
       
       
         
       
       
       <link rel="icon" href="../../assets/Kayba_logo_rounded.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
 <title>ACE Documentation</title>
@@ -1470,6 +1470,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../claude-sdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcp-client-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Client Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../opik/" class="md-nav__link">
         
   
@@ -1888,6 +1972,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hosted-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hosted API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2684,10 +2796,10 @@
 <a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a>
 <a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a><span class="gu">### `debugging-00005`</span>
 <a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a>
-<a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a>Test litellm calls directly before debugging ace_next pipeline
+<a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a>Test litellm calls directly before debugging ace pipeline
 <a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a>
 <a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a><span class="gs">**Justification:**</span> Systematic debugging approach that isolated authentication issues
-<a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a><span class="gs">**Evidence:**</span> Direct litellm.completion() calls worked while ace_next failed
+<a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a><span class="gs">**Evidence:**</span> Direct litellm.completion() calls worked while ace failed
 <a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a>
 <a id="__codelineno-24-22" name="__codelineno-24-22" href="#__codelineno-24-22"></a><span class="ge">*Tags: helpful=1, harmful=0, neutral=0*</span>
 </code></pre></div>
@@ -2796,8 +2908,8 @@
 </code></pre></div>
 </details>
 <details class="question">
-<summary>Import errors for <code>ace_next</code> (host setup)</summary>
-<p>The Docker image includes a cloned copy of the ACE repo at <code>/opt/ace</code> with all dependencies pre-installed — this is handled by <code>Dockerfile.ace</code>. For the host setup, make sure you run from the ACE repo root with <code>uv run</code> so that <code>ace_next</code> is importable:</p>
+<summary>Import errors for <code>ace</code> (host setup)</summary>
+<p>The Docker image includes a cloned copy of the ACE repo at <code>/opt/ace</code> with all dependencies pre-installed — this is handled by <code>Dockerfile.ace</code>. For the host setup, make sure you run from the ACE repo root with <code>uv run</code> so that <code>ace</code> is importable:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nb">cd</span><span class="w"> </span>/path/to/agentic-context-engine
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>~/.openclaw/workspace/skills/kayba-ace/learn_from_traces.py
 </code></pre></div>
@@ -2813,7 +2925,7 @@
 <ul>
 <li><a href="../../guides/integration/">Integration Pattern</a> — how the INJECT/EXECUTE/LEARN pattern works</li>
 <li><a href="../../concepts/skillbook/">The Skillbook</a> — how learned strategies are stored</li>
-<li><a href="../../ACE_DESIGN/">ACE Design</a> — architecture and step reference</li>
+<li><a href="../ACE_DESIGN.md">ACE Design</a> — architecture and step reference</li>
 </ul>
 
 

@@ -10,16 +10,20 @@
       
       
       
-        <link rel="canonical" href="https://kayba-ai.github.io/agentic-context-engine/latest/old_docs/INSIGHT_SOURCES/">
+        <link rel="canonical" href="https://kayba-ai.github.io/agentic-context-engine/latest/integrations/claude-sdk/">
       
       
+        <link rel="prev" href="../claude-code/">
+      
+      
+        <link rel="next" href="../mcp/">
       
       
         
       
       
       <link rel="icon" href="../../assets/Kayba_logo_rounded.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
 <title>ACE Documentation</title>
@@ -72,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#insight-source-tracing" class="md-skip">
+        <a href="#claude-sdk-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Insight Source Tracing
+              Claude SDK
             
           </span>
         </div>
@@ -322,11 +326,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../integrations/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -1264,28 +1270,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -1303,7 +1312,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1321,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -1349,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/litellm/" class="md-nav__link">
+      <a href="../litellm/" class="md-nav__link">
         
   
   
@@ -1377,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/langchain/" class="md-nav__link">
+      <a href="../langchain/" class="md-nav__link">
         
   
   
@@ -1405,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/browser-use/" class="md-nav__link">
+      <a href="../browser-use/" class="md-nav__link">
         
   
   
@@ -1433,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/claude-code/" class="md-nav__link">
+      <a href="../claude-code/" class="md-nav__link">
         
   
   
@@ -1458,10 +1467,246 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude SDK
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What It Provides
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#claudesdkexecutestep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClaudeSDKExecuteStep
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tool Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-read-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to Read Next
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/opik/" class="md-nav__link">
+      <a href="../mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcp-client-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Client Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../opik/" class="md-nav__link">
         
   
   
@@ -1489,7 +1734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/openclaw/" class="md-nav__link">
+      <a href="../openclaw/" class="md-nav__link">
         
   
   
@@ -1497,6 +1742,34 @@
     
   
     OpenClaw
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hosted-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hosted API
   
 
     
@@ -1571,33 +1844,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#whats-captured" class="md-nav__link">
+  <a href="#quick-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What's Captured
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What&#39;s Captured">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-learning_text-is-populated" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How learning_text is Populated
+        Quick Start
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#trace-references" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Trace References
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What It Provides
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#claudesdkexecutestep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClaudeSDKExecuteStep
       
     </span>
   </a>
@@ -1610,60 +1905,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#querying-sources" class="md-nav__link">
+  <a href="#observability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Querying Sources
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Querying Sources">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#source_map-raw-source-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        source_map() — Raw source data
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#source_summary-aggregated-statistics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        source_summary() — Aggregated statistics
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#source_filter-query-by-criteria" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        source_filter() — Query by criteria
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-interpret-sources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to Interpret Sources
+        Observability
       
     </span>
   </a>
@@ -1671,10 +1916,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
+  <a href="#tool-use" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architecture
+        Tool Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-read-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to Read Next
       
     </span>
   </a>
@@ -1701,142 +1968,160 @@
   
 
 
-<h1 id="insight-source-tracing">Insight Source Tracing<a class="headerlink" href="#insight-source-tracing" title="Permanent link">&para;</a></h1>
-<p>Insight source tracing tracks the <strong>provenance of every skill</strong> in an ACE skillbook. When the framework learns a new strategy or updates an existing one, metadata is attached describing <em>why</em> the skill was created: which sample triggered the learning, what error was observed, and the reflector's diagnosis.</p>
-<h2 id="whats-captured">What's Captured<a class="headerlink" href="#whats-captured" title="Permanent link">&para;</a></h2>
-<p>Every skill that originates from the ACE learning loop carries an <code>InsightSource</code> dict in its <code>sources</code> list:</p>
+<h1 id="claude-sdk-integration">Claude SDK Integration<a class="headerlink" href="#claude-sdk-integration" title="Permanent link">&para;</a></h1>
+<p>The Claude SDK integration provides composable ACE steps for the
+<a href="https://docs.anthropic.com/en/api/client-sdks">Anthropic Python SDK</a>. Use it
+when you want direct Messages API access inside your own pipeline instead of a
+prebuilt runner.</p>
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">Reflector</span><span class="p">,</span> <span class="n">SkillManager</span><span class="p">,</span> <span class="n">Skillbook</span><span class="p">,</span> <span class="n">learning_tail</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace.integrations</span><span class="w"> </span><span class="kn">import</span> <span class="n">ClaudeSDKExecuteStep</span><span class="p">,</span> <span class="n">ClaudeSDKToTrace</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">skillbook</span> <span class="o">=</span> <span class="n">Skillbook</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">pipe</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">ClaudeSDKExecuteStep</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;claude-sonnet-4-20250514&quot;</span><span class="p">),</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">ClaudeSDKToTrace</span><span class="p">(),</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="o">*</span><span class="n">learning_tail</span><span class="p">(</span><span class="n">Reflector</span><span class="p">(</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">),</span> <span class="n">SkillManager</span><span class="p">(</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">),</span> <span class="n">skillbook</span><span class="p">),</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">])</span>
+</code></pre></div>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uv<span class="w"> </span>add<span class="w"> </span>ace-framework<span class="o">[</span>claude-sdk<span class="o">]</span>
+</code></pre></div>
+<p>For observability, also install and configure Logfire:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>uv<span class="w"> </span>add<span class="w"> </span>ace-framework<span class="o">[</span>logfire<span class="o">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace.observability</span><span class="w"> </span><span class="kn">import</span> <span class="n">configure_logfire</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">configure_logfire</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="what-it-provides">What It Provides<a class="headerlink" href="#what-it-provides" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>ClaudeSDKExecuteStep</code> — injects skillbook context, calls the Anthropic
+  Messages API, and writes a validated <code>ClaudeSDKResult</code> to <code>ctx.trace</code></li>
+<li><code>ClaudeSDKToTrace</code> — converts <code>ClaudeSDKResult</code> into the standard ACE trace
+  dict consumed by <code>ReflectStep</code></li>
+<li><code>ClaudeSDKResult</code> — Pydantic model with validated output, token usage,
+  latency, tool calls, and raw response access</li>
+<li><code>ToolCall</code> — Pydantic model for captured Claude tool invocations</li>
+</ul>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<h3 id="claudesdkexecutestep">ClaudeSDKExecuteStep<a class="headerlink" href="#claudesdkexecutestep" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Field</th>
+<th>Parameter</th>
 <th>Type</th>
+<th>Default</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>sample_question</code></td>
+<td><code>model</code></td>
 <td><code>str</code></td>
-<td>The question/task that triggered the learning (capped at 200 chars)</td>
+<td><code>"claude-sonnet-4-20250514"</code></td>
+<td>Claude model ID</td>
 </tr>
 <tr>
-<td><code>epoch</code></td>
+<td><code>system_prompt</code></td>
+<td><code>str \| None</code></td>
+<td><code>None</code></td>
+<td>Base system prompt</td>
+</tr>
+<tr>
+<td><code>max_tokens</code></td>
 <td><code>int</code></td>
-<td>Training epoch number</td>
+<td><code>4096</code></td>
+<td>Maximum output tokens</td>
 </tr>
 <tr>
-<td><code>step</code></td>
-<td><code>int</code></td>
-<td>Step index within the epoch</td>
+<td><code>temperature</code></td>
+<td><code>float</code></td>
+<td><code>0.0</code></td>
+<td>Sampling temperature</td>
 </tr>
 <tr>
-<td><code>trace_refs</code></td>
-<td><code>list</code></td>
-<td>Trace references pointing to agent reasoning (see below)</td>
+<td><code>tools</code></td>
+<td><code>list[dict] \| None</code></td>
+<td><code>None</code></td>
+<td>Anthropic tool definitions</td>
 </tr>
 <tr>
-<td><code>learning_text</code></td>
-<td><code>str?</code></td>
-<td>The matched <code>ExtractedLearning.learning</code> text, resolved via <code>learning_index</code></td>
+<td><code>api_key</code></td>
+<td><code>str \| None</code></td>
+<td><code>None</code></td>
+<td>Optional API key override</td>
 </tr>
 <tr>
-<td><code>error_identification</code></td>
-<td><code>str?</code></td>
-<td>The reflector's raw error diagnosis text (capped at 200 chars)</td>
+<td><code>base_url</code></td>
+<td><code>str \| None</code></td>
+<td><code>None</code></td>
+<td>Optional API base URL</td>
 </tr>
 <tr>
-<td><code>sample_id</code></td>
-<td><code>str?</code></td>
-<td>Caller-defined identifier (e.g., trace filename, session ID)</td>
+<td><code>inject_skillbook</code></td>
+<td><code>bool</code></td>
+<td><code>True</code></td>
+<td>Prepend skillbook context to the system prompt</td>
+</tr>
+<tr>
+<td><code>client</code></td>
+<td><code>Any</code></td>
+<td><code>None</code></td>
+<td>Injected Anthropic client for testing or custom transport</td>
 </tr>
 </tbody>
 </table>
-<h3 id="how-learning_text-is-populated">How <code>learning_text</code> is Populated<a class="headerlink" href="#how-learning_text-is-populated" title="Permanent link">&para;</a></h3>
-<p>The SkillManager outputs a <code>learning_index</code> (0-based int) on each ADD/UPDATE operation, referencing which <code>extracted_learning</code> from the reflector's output produced the operation. <code>build_insight_source()</code> uses this index to look up the exact learning text:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Reflector outputs extracted_learnings: [
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  {learning: &quot;Verify multiplication&quot;, ...},    // index 0
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  {learning: &quot;Check boundary conditions&quot;, ...} // index 1
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>]
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>SkillManager outputs operations: [
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  {type: &quot;ADD&quot;, content: &quot;Double-check math&quot;, learning_index: 0, ...},
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>]
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>build_insight_source() reads op.learning_index=0
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  → extracted_learnings[0].learning = &quot;Verify multiplication&quot;
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  → stores as learning_text on InsightSource
-</code></pre></div>
-<p>If <code>learning_index</code> is <code>None</code> or out of range, <code>learning_text</code> is set to <code>None</code>.</p>
-<h3 id="trace-references">Trace References<a class="headerlink" href="#trace-references" title="Permanent link">&para;</a></h3>
-<p>Each <code>TraceReference</code> in <code>trace_refs</code> uses one of two formats:</p>
-<ul>
-<li><strong>Structured</strong> (when <code>TraceContext</code> is available): <code>step_indices</code> and <code>action_types</code> pointing to specific execution steps.</li>
-<li><strong>Text fallback</strong> (default): A text excerpt from the agent's reasoning (up to 200 chars) with <code>excerpt_location</code> set to <code>"reasoning"</code>.</li>
-</ul>
-<h2 id="querying-sources">Querying Sources<a class="headerlink" href="#querying-sources" title="Permanent link">&para;</a></h2>
-<h3 id="source_map-raw-source-data"><code>source_map()</code> — Raw source data<a class="headerlink" href="#source_map-raw-source-data" title="Permanent link">&para;</a></h3>
-<p>Returns a dict mapping skill IDs to their source lists. Only includes skills that have sources.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">source_map</span> <span class="o">=</span> <span class="n">skillbook</span><span class="o">.</span><span class="n">source_map</span><span class="p">()</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">for</span> <span class="n">skill_id</span><span class="p">,</span> <span class="n">sources</span> <span class="ow">in</span> <span class="n">source_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">skill_id</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">sources</span><span class="p">)</span><span class="si">}</span><span class="s2"> source(s)&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="k">for</span> <span class="n">src</span> <span class="ow">in</span> <span class="n">sources</span><span class="p">:</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  epoch=</span><span class="si">{</span><span class="n">src</span><span class="p">[</span><span class="s1">&#39;epoch&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="k">if</span> <span class="n">src</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;error_identification&quot;</span><span class="p">):</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  diagnosis: </span><span class="si">{</span><span class="n">src</span><span class="p">[</span><span class="s1">&#39;error_identification&#39;</span><span class="p">][:</span><span class="mi">80</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="source_summary-aggregated-statistics"><code>source_summary()</code> — Aggregated statistics<a class="headerlink" href="#source_summary-aggregated-statistics" title="Permanent link">&para;</a></h3>
-<p>Returns distributions of epochs and sample questions across all sources.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">summary</span> <span class="o">=</span> <span class="n">skillbook</span><span class="o">.</span><span class="n">source_summary</span><span class="p">()</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total sources: </span><span class="si">{</span><span class="n">summary</span><span class="p">[</span><span class="s1">&#39;total_sources&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Epochs: </span><span class="si">{</span><span class="n">summary</span><span class="p">[</span><span class="s1">&#39;epochs&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Top questions: </span><span class="si">{</span><span class="n">summary</span><span class="p">[</span><span class="s1">&#39;sample_questions&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="source_filter-query-by-criteria"><code>source_filter()</code> — Query by criteria<a class="headerlink" href="#source_filter-query-by-criteria" title="Permanent link">&para;</a></h3>
-<p>Filter sources by epoch or sample question (substring match).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># All skills learned in epoch 2</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">epoch_2</span> <span class="o">=</span> <span class="n">skillbook</span><span class="o">.</span><span class="n">source_filter</span><span class="p">(</span><span class="n">epoch</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># All skills triggered by a specific question</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">math_q</span> <span class="o">=</span> <span class="n">skillbook</span><span class="o">.</span><span class="n">source_filter</span><span class="p">(</span><span class="n">sample_question</span><span class="o">=</span><span class="s2">&quot;2+2&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Combined criteria (AND logic)</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">specific</span> <span class="o">=</span> <span class="n">skillbook</span><span class="o">.</span><span class="n">source_filter</span><span class="p">(</span><span class="n">epoch</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">sample_question</span><span class="o">=</span><span class="s2">&quot;capital&quot;</span><span class="p">)</span>
-</code></pre></div>
-<blockquote>
-<p><strong>Tip for prompt optimization</strong>: When <code>sample_question</code> is a placeholder (e.g., <code>"-"</code>), use <code>sample_id</code> via <code>source_map()</code> to identify which trace file produced each skill:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">for</span> <span class="n">skill_id</span><span class="p">,</span> <span class="n">sources</span> <span class="ow">in</span> <span class="n">skillbook</span><span class="o">.</span><span class="n">source_map</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="k">for</span> <span class="n">src</span> <span class="ow">in</span> <span class="n">sources</span><span class="p">:</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">skill_id</span><span class="si">}</span><span class="s2"> ← </span><span class="si">{</span><span class="n">src</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;sample_id&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;unknown&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-</blockquote>
-<h2 id="how-to-interpret-sources">How to Interpret Sources<a class="headerlink" href="#how-to-interpret-sources" title="Permanent link">&para;</a></h2>
-<p>Reading an insight source tells you the full story of a skill's creation:</p>
+<h2 id="observability">Observability<a class="headerlink" href="#observability" title="Permanent link">&para;</a></h2>
+<p>When Logfire is configured, the step emits three layers of observability:</p>
 <ol>
-<li><strong><code>sample_question</code></strong> — What task was being attempted?</li>
-<li><strong><code>error_identification</code></strong> — What went wrong (or right)? The reflector's raw diagnosis.</li>
-<li><strong><code>trace_refs</code></strong> — What was the agent thinking? The text excerpt shows the agent's reasoning at the time.</li>
-<li><strong><code>learning_text</code></strong> — What specific learning was extracted by the reflector? (resolved via <code>learning_index</code>)</li>
-<li><strong><code>sample_id</code></strong> — Caller-defined identifier for the source (e.g., trace filename). Useful for prompt optimization workflows where <code>sample_question</code> may be a placeholder.</li>
+<li>Step-level <code>logfire.span(...)</code> around <code>ClaudeSDKExecuteStep</code></li>
+<li>Structured <code>logfire.info(...)</code> and <code>logfire.error(...)</code> events with tokens,
+   latency, stop reason, and tool counts</li>
+<li><code>logfire.instrument_anthropic(client)</code> auto-instrumentation for the
+   underlying SDK calls</li>
 </ol>
-<p>Skills with multiple entries in <code>sources</code> were updated across multiple learning iterations. Check <code>epoch</code> and <code>step</code> to see the evolution.</p>
-<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
-<p>Insight sources are attached during the ACE learning loop, after the SkillManager produces update operations but before they are applied to the skillbook:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Sample (carries optional .id for caller-defined identification)
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  → Agent.generate()        produces AgentOutput (with reasoning)
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  → Environment.evaluate()  produces EnvironmentResult (with feedback)
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  → Reflector.reflect()     produces ReflectorOutput (with error_identification, learnings)
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>  → SkillManager.update()   produces UpdateOperations (ADD, UPDATE, TAG, REMOVE)
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>                             ADD/UPDATE ops carry learning_index
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>  → build_insight_source()  attaches InsightSource metadata to ADD/UPDATE ops
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>                             resolves learning_index → learning_text
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>                             copies Sample.id → InsightSource.sample_id
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  → Skillbook.apply_update() stores ops with their sources
+<p>The result model also captures:</p>
+<ul>
+<li><code>input_tokens</code></li>
+<li><code>output_tokens</code></li>
+<li><code>total_tokens</code></li>
+<li><code>latency_seconds</code></li>
+<li><code>stop_reason</code></li>
+<li><code>tool_calls</code></li>
+</ul>
+<h2 id="tool-use">Tool Use<a class="headerlink" href="#tool-use" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">tools</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;get_weather&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Get the current weather for a city.&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="s2">&quot;input_schema&quot;</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>            <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">}},</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>            <span class="s2">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">],</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        <span class="p">},</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="p">}</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="p">]</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="n">execute</span> <span class="o">=</span> <span class="n">ClaudeSDKExecuteStep</span><span class="p">(</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;claude-sonnet-4-20250514&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="n">tools</span><span class="o">=</span><span class="n">tools</span><span class="p">,</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="p">)</span>
 </code></pre></div>
-<p>The <code>build_insight_source()</code> function in <code>ace/insight_source.py</code> handles:
-- Building trace references from agent output
-- Resolving each operation's <code>learning_index</code> to its <code>learning_text</code>
-- Storing the reflector's raw error identification</p>
-<p>This metadata is preserved through serialization (<code>save_to_file</code> / <code>load_from_file</code>), so you can analyze provenance of skills trained in previous sessions.</p>
+<p>If Claude returns tool use blocks, they are captured on
+<code>ClaudeSDKResult.tool_calls</code> as validated <code>ToolCall</code> models.</p>
+<h2 id="validation">Validation<a class="headerlink" href="#validation" title="Permanent link">&para;</a></h2>
+<p><code>ClaudeSDKExecuteStep</code> validates its configuration with Pydantic before the
+client is constructed. <code>ClaudeSDKResult</code> and <code>ToolCall</code> are also Pydantic
+models, so invalid token counts, latency values, or malformed tool calls are
+rejected early.</p>
+<h2 id="what-to-read-next">What to Read Next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../guides/integration/">Integration Pattern</a> — the shared
+  INJECT/EXECUTE/LEARN design</li>
+<li><a href="../../guides/composing-pipelines/">Composing Pipelines</a> — mix SDK steps with
+  other ACE steps</li>
+</ul>
 
 
 

@@ -16,14 +16,14 @@
         <link rel="prev" href="../browser-use/">
       
       
-        <link rel="next" href="../opik/">
+        <link rel="next" href="../claude-sdk/">
       
       
         
       
       
       <link rel="icon" href="../../assets/Kayba_logo_rounded.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
 <title>ACE Documentation</title>
@@ -1596,6 +1596,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pipeline-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pipeline Skill
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works-continued" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works (continued)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#running-multiple-tasks" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1644,6 +1666,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../claude-sdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Claude SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcp-client-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Client Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../opik/" class="md-nav__link">
         
   
@@ -1680,6 +1786,34 @@
     
   
     OpenClaw
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hosted-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hosted API
   
 
     
@@ -1848,6 +1982,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pipeline-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pipeline Skill
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works-continued" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works (continued)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#running-multiple-tasks" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1903,7 +2059,7 @@
 <h1 id="claude-code-integration">Claude Code Integration<a class="headerlink" href="#claude-code-integration" title="Permanent link">&para;</a></h1>
 <p>The <code>ClaudeCode</code> runner wraps the <a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code CLI</a> with ACE learning. The agent runs coding tasks in your project directory and learns strategies from each execution — improving code generation, debugging, and project-specific patterns over time.</p>
 <h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace_next</span><span class="w"> </span><span class="kn">import</span> <span class="n">ClaudeCode</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ace</span><span class="w"> </span><span class="kn">import</span> <span class="n">ClaudeCode</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">runner</span> <span class="o">=</span> <span class="n">ClaudeCode</span><span class="o">.</span><span class="n">from_model</span><span class="p">(</span><span class="n">working_dir</span><span class="o">=</span><span class="s2">&quot;./my_project&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
@@ -1911,7 +2067,7 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">runner</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;coding_expert.json&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>ace-framework<span class="o">[</span>claude-code<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uv<span class="w"> </span>add<span class="w"> </span>ace-framework<span class="o">[</span>claude-code<span class="o">]</span>
 </code></pre></div>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1946,13 +2102,13 @@
 <td><code>ace_max_tokens</code></td>
 <td><code>int</code></td>
 <td><code>2048</code></td>
-<td>Max tokens for ACE LLM</td>
+<td>Max tokens for ACE LLM responses</td>
 </tr>
 <tr>
-<td><code>ace_llm</code></td>
-<td><code>LLMClientLike</code></td>
-<td><code>None</code></td>
-<td>Pre-built LLM for ACE roles</td>
+<td><code>ace_temperature</code></td>
+<td><code>float</code></td>
+<td><code>0.0</code></td>
+<td>Sampling temperature for ACE roles</td>
 </tr>
 </tbody>
 </table>
@@ -2036,6 +2192,23 @@
 <li><strong>Extract trace</strong> — ACE reads the Claude Code execution transcript</li>
 <li><strong>LEARN</strong> — Reflector analyzes the trace, SkillManager updates the skillbook</li>
 </ol>
+<h2 id="pipeline-skill">Pipeline Skill<a class="headerlink" href="#pipeline-skill" title="Permanent link">&para;</a></h2>
+<p>The <strong>kayba-pipeline</strong> skill gives Claude Code a 7-stage evaluation and improvement pipeline that can be triggered directly from the chat. Install it with:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>kayba<span class="w"> </span>setup
+</code></pre></div>
+<p>This copies the skill into <code>.claude/skills/kayba-pipeline/</code>. The pipeline stages are:</p>
+<ol>
+<li><strong>Analyze traces</strong> — extract patterns from agent execution transcripts</li>
+<li><strong>Compute metrics</strong> — score traces against quality dimensions</li>
+<li><strong>Build rubric</strong> — generate a structured evaluation rubric</li>
+<li><strong>Plan fixes</strong> — propose concrete improvements</li>
+<li><strong>HITL review</strong> — optional human-in-the-loop approval gate</li>
+<li><strong>Apply fixes</strong> — execute the approved changes</li>
+<li><strong>Verify</strong> — confirm fixes pass the rubric</li>
+</ol>
+<p>Trigger the pipeline by saying <strong>"run the pipeline"</strong> or <strong>"kayba pipeline"</strong> in Claude Code with a traces folder in your project.</p>
+<p>To skip skill installation: <code>kayba setup --no-skills</code>. See <a href="../hosted-api/#agent-setup">Hosted API</a> for all <code>kayba setup</code> options.</p>
+<h2 id="how-it-works-continued">How It Works (continued)<a class="headerlink" href="#how-it-works-continued" title="Permanent link">&para;</a></h2>
 <p>The agent learns project-specific patterns like:</p>
 <ul>
 <li>Code style and conventions</li>
@@ -2044,17 +2217,17 @@
 <li>Module structure and dependencies</li>
 </ul>
 <h2 id="running-multiple-tasks">Running Multiple Tasks<a class="headerlink" href="#running-multiple-tasks" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">results</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">run</span><span class="p">([</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="s2">&quot;Add unit tests for utils.py&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="s2">&quot;Fix the bug in the login handler&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="s2">&quot;Refactor the database module to use connection pooling&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">results</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">run</span><span class="p">([</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="s2">&quot;Add unit tests for utils.py&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="s2">&quot;Fix the bug in the login handler&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="s2">&quot;Refactor the database module to use connection pooling&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">])</span>
 </code></pre></div>
 <h2 id="resuming-from-a-saved-skillbook">Resuming from a Saved Skillbook<a class="headerlink" href="#resuming-from-a-saved-skillbook" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">runner</span> <span class="o">=</span> <span class="n">ClaudeCode</span><span class="o">.</span><span class="n">from_model</span><span class="p">(</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">working_dir</span><span class="o">=</span><span class="s2">&quot;./my_project&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">skillbook_path</span><span class="o">=</span><span class="s2">&quot;coding_expert.json&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">runner</span> <span class="o">=</span> <span class="n">ClaudeCode</span><span class="o">.</span><span class="n">from_model</span><span class="p">(</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">working_dir</span><span class="o">=</span><span class="s2">&quot;./my_project&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">skillbook_path</span><span class="o">=</span><span class="s2">&quot;coding_expert.json&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">)</span>
 </code></pre></div>
 <h2 id="what-to-read-next">What to Read Next<a class="headerlink" href="#what-to-read-next" title="Permanent link">&para;</a></h2>
 <ul>
